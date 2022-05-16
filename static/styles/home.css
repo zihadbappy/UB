@@ -1,0 +1,196 @@
+body{
+    background-color:  rgb(234, 238, 238);
+    margin-bottom: 5rem;
+}
+
+    /* @media (max-width: 978px) {
+    #nav .container{
+        margin:0;
+        }
+    } */
+
+.nav-item .nav-link{
+    color: white;
+}
+.navbar-brand{
+    color: white;
+    font-size: 2.5rem;
+}
+
+.navbar{
+    background-color: rgb(32, 128, 253);
+    border-color: rgb(6, 43, 255);
+    border-width: 0px 0px 2px 0px;
+}
+
+@media screen and (min-width: 980px) {
+#nav .container{    
+margin: 0 100px;
+}
+}
+@media screen and (min-width: 1400px) {
+#nav .container{
+margin: 0 250px;
+}
+}
+@media screen and (min-width: 1920px) {
+#nav .container{
+margin: 0 550px;
+}
+}
+
+#nav a:hover{
+    color:rgb(0, 0, 0);
+}
+
+#nav{
+    
+    height: 5rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Zen Old Mincho';
+    font-weight: 700;
+}
+.alert-success {
+    background-color: #ffffff;
+    border-color: #24a428;
+}
+.alert {
+    color: #000;
+    border-style: solid;
+    border-width: 0px 0px 3px 5px;
+    position: relative;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+}
+
+textarea{
+        white-space: pre-wrap;
+
+    }
+
+#loginFlash{
+        margin-top: 5rem;
+        align-items: center;
+        text-align: center;
+        padding-left: 0;
+        background-color: aquamarine;
+}
+ul {
+    list-style-type: none;
+  }
+    
+    #card{
+    align-items: center;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+    background-color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-family: 'poppins';
+
+}
+#loginCard{
+        padding: 30px 0;
+    align-items: center;
+text-align: center;
+margin-top: 15rem;
+background-color: white;
+padding-top: 1rem;
+font-family: 'poppins';
+}
+#loginForm{
+    margin-top: 0;
+}
+
+
+#exp{
+    white-space: pre-line;
+}
+
+
+#definition{
+    white-space: pre-line;
+    box-sizing: border-box;
+    
+}
+
+#userHandle{
+    opacity: 60%;
+}
+
+
+#word{
+color:blue;
+font-size: 2rem;
+font-family:'Rubik';
+padding:5px 0;
+}
+    
+.updown:hover{
+    color:brown;
+}
+
+#profilepic{
+    width: 40%;
+    border-radius: 50%;
+}
+
+
+#upvote
+{
+}
+
+
+
+#downvote
+{
+}
+
+.paginationRow{
+    align-items: center;
+    margin-left: auto;
+    
+    margin-right: auto;
+    margin-top: 4rem;
+    color: white;
+    font-family: 'Rubik';
+    text-align: center;
+    font-weight: 700;
+}
+.paginationRow a{
+    color: inherit;
+    margin: auto;
+    font-size: 1rem;
+    text-decoration: none;
+    /* color: rgb(32, 128, 253); */
+    color: rgb(6, 43, 255);
+}
+.paginationRow a:hover{
+color: brown;
+}
+@media screen and (min-width: 980px) {
+    .paginationRow .row{    
+    margin: 0 20rem;
+    }
+@media screen and (min-width: 750px) {
+    .paginationRow .row{    
+    margin: 0 16rem;
+    }
+    }
+    @media screen and (min-width: 1400px) {
+        .paginationRow .row{
+    margin: 0 26rem;
+    }
+    }
+    @media screen and (min-width: 1920px) {
+    .paginationRow .row{
+    margin: 0 26rem;
+    }
+    }}
