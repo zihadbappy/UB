@@ -37,7 +37,7 @@ db=client.UrbanBangla
 
 
 @app.route("/")
-def get_words():
+async def get_words():
     if request.args.get('page') is not None:
         session['url']='/?page='+request.args.get('page')
     else: session['url']='/'
@@ -50,7 +50,7 @@ def get_words():
         pageNo=int(request.args.get('page'))
     offset = (pageNo-1)* limit
 
-    word_order=list(db.words.find({"status":"approved"}))
+    word_order=await list(db.words.find({"status":"approved"}))
     totalPages= math.ceil(len(word_order)/limit)
     outputWords=[]
     # when the user is not logged in
