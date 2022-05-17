@@ -18,7 +18,7 @@ ca = certifi.where()
 client = pymongo.MongoClient("mongodb+srv://zihadbappy:6969@stonn.stmwf.mongodb.net/UrbanBangla?retryWrites=true&w=majority", tlsCAFile=ca)
 db=client.UrbanBangla
 
-GOOGLE_CLIENT_ID = os.getenv('GOOGLE_CLIENT_ID')
+GOOGLE_CLIENT_ID = '842582196840-gflmc5r7peniumcg827soo4mggh53uo1.apps.googleusercontent.com'
 
 os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
 
@@ -27,7 +27,7 @@ client_secrets_file = os.path.join(pathlib.Path(__file__).parent, "client_secret
 flow = Flow.from_client_secrets_file(
     client_secrets_file=client_secrets_file,
     scopes=["https://www.googleapis.com/auth/userinfo.profile", "https://www.googleapis.com/auth/userinfo.email", "openid"],
-    redirect_uri="http://urbanbangla.herokuapp.com/user/callback"
+    redirect_uri="https://urbanbangla.herokuapp.com/user/callback"
 )
 
 def login_is_required(function):
