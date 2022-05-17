@@ -15,7 +15,7 @@ from pip._vendor import cachecontrol
 import google.auth.transport.requests
 
 ca = certifi.where()
-client = pymongo.MongoClient(os.getenv('MONGO_URI'), tlsCAFile=ca)
+client = pymongo.MongoClient("mongodb+srv://zihadbappy:6969@stonn.stmwf.mongodb.net/UrbanBangla?retryWrites=true&w=majority", tlsCAFile=ca)
 db=client.UrbanBangla
 
 GOOGLE_CLIENT_ID = os.getenv('GOOGLE_CLIENT_ID')
@@ -27,7 +27,7 @@ client_secrets_file = os.path.join(pathlib.Path(__file__).parent, "client_secret
 flow = Flow.from_client_secrets_file(
     client_secrets_file=client_secrets_file,
     scopes=["https://www.googleapis.com/auth/userinfo.profile", "https://www.googleapis.com/auth/userinfo.email", "openid"],
-    redirect_uri="http://127.0.0.1:5000/user/callback"
+    redirect_uri="http://urbanbangla.herokuapp.com/user/callback"
 )
 
 def login_is_required(function):
