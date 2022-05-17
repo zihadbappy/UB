@@ -22,7 +22,7 @@ from werkzeug.utils import redirect
 from datetime import datetime
 
 app = Flask(__name__)
-app.secret_key = os.urandom(24)                                             
+app.secret_key = 'production'                                             
 
 import auth_routes
 from auth_routes import login_is_required
