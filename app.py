@@ -31,7 +31,7 @@ from auth_routes import login_is_required
 ca = certifi.where()
 logging.basicConfig(level=logging.DEBUG)
 
-client = pymongo.MongoClient(os.getenv('MONGO_URI'), tlsCAFile=ca)
+client = pymongo.MongoClient("mongodb+srv://zihadbappy:6969@stonn.stmwf.mongodb.net/UrbanBangla?retryWrites=true&w=majority", tlsCAFile=ca)
 db=client.UrbanBangla
 # except pymongo.errors.ConnectionFailure as e:
 #     print(colored(e, 'red'))
