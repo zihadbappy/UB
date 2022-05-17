@@ -3,6 +3,7 @@ from flask import Flask, flash, jsonify, request, render_template,redirect, sess
 from flask.helpers import url_for
 import traceback
 import sys
+import asyncio
 import os
 # from pymongo.message import update
 from termcolor import colored
@@ -37,7 +38,7 @@ db=client.UrbanBangla
 
 
 @app.route("/")
-async def get_words():
+def get_words():
     if request.args.get('page') is not None:
         session['url']='/?page='+request.args.get('page')
     else: session['url']='/'
@@ -50,7 +51,7 @@ async def get_words():
         pageNo=int(request.args.get('page'))
     offset = (pageNo-1)* limit
 
-    word_order=await list(db.words.find({"status":"approved"}))
+    word_order=list(db.words.find({"status":"approved"}))
     totalPages= math.ceil(len(word_order)/limit)
     outputWords=[]
     # when the user is not logged in
