@@ -41,14 +41,14 @@
           <div id="upvote">
             <form action="/undo_upvote/{{word['_id']}}" method="POST">
 
-    <button style="border: none; all: unset;"><i class="fas fa-thumbs-up updown" style="font-size: 2rem; color:  #1FA2F3;;"></i>
+    <button style="border: none; all: unset;"><i class="fas fa-thumbs-up updown" style="font-size: 2rem;"></i>
              </button>&nbsp;&nbsp;{{word['upvote']}}
             </form>
           </div>
           {%else%}
           <div id="upvote">
             <form action="/upvote/{{word['_id']}}" method="POST">
-             <button style="border: none; all: unset;"><i class="far fa-thumbs-up updown" style="font-size: 2rem; color:  #1FA2F3;;"></i>
+             <button style="border: none; all: unset;"><i class="far fa-thumbs-up updown" style="font-size: 2rem;"></i>
              </button>&nbsp;&nbsp;{{word['upvote']}}
             </form>
           </div>
@@ -58,14 +58,14 @@
           {%if word['downvote_status']==True%}
           <div id="downvote">
             <form action="/undo_downvote/{{word['_id']}}" method="POST">
-              <button style="border: none; all: unset;"><i class="fas fa-thumbs-down updown" style="font-size: 2rem; color:  #1FA2F3;;"></i>
+              <button style="border: none; all: unset;"><i class="fas fa-thumbs-down updown" style="font-size: 2rem;"></i>
               </button>&nbsp;&nbsp;{{word['downvote']}}
              </form>
           </div>
           {%else%}
           <div id="downvote">
             <form action="/downvote/{{word['_id']}}" method="POST">
-              <button style="border: none; all: unset;"><i class="far fa-thumbs-down updown" style="font-size: 2rem; color:  #1FA2F3;;"></i>
+              <button style="border: none; all: unset;"><i class="far fa-thumbs-down updown" style="font-size: 2rem;"></i>
               </button>&nbsp;&nbsp;{{word['downvote']}}
              </form>
           </div>
