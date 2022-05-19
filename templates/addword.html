@@ -1,5 +1,5 @@
 {% extends 'layout.html' %} {% block content %}
-<div class="container">
+<div class="container addword">
   {% if not session.get('name')%}
   <div style="margin-top: 5rem">
     <h3>Please Login to submit word</h3>
@@ -8,7 +8,7 @@
       method="GET"
       style="margin-top: 5rem"
     >
-      <button class="form-control-label">Login</button>
+      <button class="form-control-label button">Login</button>
     </form>
   </div>
   {% endif %} {% if session['name']%}
@@ -27,43 +27,45 @@
   <div style="margin-top: 2rem">
     <form action="/addword" method="POST">
       <div class="form-group row">
-        <label for="word" class="col-sm-2">Word:</label><br />
+        <label for="word" class="col-sm-2">Word:</label>
         <input
           type="text"
-          class="form-control-label col-sm-6"
+          class="form-control-label col-sm-4"
           id="word"
           name="word"
           required
-        /><br />
+        /><br>
       </div>
-      <div class="form-group row">
-        <label for="def" class="col-sm-2">Definition: </label><br />
+      <div class="form-group row" style=" margin-top: 1rem;">
+        <label for="def" class="col-sm-2">Definition: </label>
         <textarea
           type="text"
           id="def"
           class="form-control-label col-sm-6"
-          style="height: 4rem; margin-top: 2rem;"
+          cols="80"
           name="def"
           required
         ></textarea>
-        <br />
+        <br>
       </div>
-      <div class="form-group row">
-        <label for="exp" class="col-sm-2">Explanation: (optional)</label><br />
+      <div class="form-group row" style="margin-top: 1rem;">
+        <label for="exp" class="col-sm-2">Explanation: (optional)</label>
         <textarea
           type="text"
           id="exp"
           class="form-control-label col-sm-6"
-          style="height: 4rem"
+          cols="100"
           name="exp"></textarea>
 <br >
+<div class="form-group row">
+<p class="col-sm-2"></p>
+<label for="anonCheck" style="margin-top: 2rem;" class="col-sm-6">
 <input type="checkbox" id="anonCheck" name="anonCheck" value="anonTrue">
-<label for="anonCheck">Submit anonymousely</label>
-
-<br>
+Submit anonymously</label>
+</div>
 
       </div>
-      <input type="submit" value="submit" />
+      <input type="submit" value="submit" class="button" />
     </form>
   </div>
 </div>
