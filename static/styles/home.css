@@ -51,7 +51,6 @@ body{
 
 
 #definition{
-    white-space: pre-line;
     box-sizing: border-box;
     font-size: larger;
     font-family:'Inconsolata', monospace;
@@ -67,6 +66,8 @@ body{
 
 
 #word{
+    margin-bottom: 0.5rem;
+
 color:#1FA2F3;
 font-size: 2rem;
 font-family:'Source Code Pro';
