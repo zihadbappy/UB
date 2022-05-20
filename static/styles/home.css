@@ -161,7 +161,7 @@ font-weight: 700;
 }
 .alert-success {
     background-color: #ffffff;
-    border-color: #24a428;
+    border-color:#1FA2F3;   
 }
 .alert {
     color: #000;
@@ -276,6 +276,14 @@ color: brown;
 .addword .button{
     background-color: #1FA2F3;
     color: white;
+}
+.addword #logout-btn{
+    background-color: #1FA2F3;
+    color: white;
+}
+.addword #logout-btn:hover{
+    background-color: #1FA2F3;
+    color: black;
 }
 .addword .button:hover{
     background-color: #1FA2F3;

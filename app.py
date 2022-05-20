@@ -161,7 +161,7 @@ def post_word():
             {'google_id':authorID},
             {'$push':{'words_author':word_id[0]['_id']}}
         )
-
+        flash("Word added successfully! Thanks for your contribution.")
         return redirect("/addword")
     except:
         traceback.print_exc(file=sys.stdout)
