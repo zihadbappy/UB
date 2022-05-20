@@ -157,7 +157,7 @@ def post_word():
         print(colored(word_id[0]['_id'], 'red'))
 
         # append the word to the words_author array in users table
-        db.users.update(
+        db.users.update_one(
             {'google_id':authorID},
             {'$push':{'words_author':word_id[0]['_id']}}
         )
@@ -241,7 +241,7 @@ def downvote_word(word_id):
         return redirect(session['url'])
 
 @app.route("/addword", methods=['GET'])
-@login_is_required
+@login_is_requiredz
 def word_form():
     return render_template('addword.html')
 
