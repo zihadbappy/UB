@@ -8,7 +8,7 @@ body{
     display: table;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 4rem;
+    margin-top: 2rem;
     background-color: #1B2936;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -169,7 +169,6 @@ font-weight: 700;
     border-width: 0px 0px 3px 5px;
     position: relative;
     padding: 0.5rem 1rem;
-    margin-bottom: 1rem;
     border-radius: 0.25rem;
 }
 
