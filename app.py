@@ -241,7 +241,7 @@ def downvote_word(word_id):
         return redirect(session['url'])
 
 @app.route("/addword", methods=['GET'])
-@login_is_requiredz
+@login_is_required
 def word_form():
     return render_template('addword.html')
 
