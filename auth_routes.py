@@ -100,7 +100,7 @@ def userlogout():
 @app.route('/user/protected_area', methods=['GET'])
 @login_is_required
 def protected_area():
-        flash("logged in successfully")
+        flash("logged in successfully!")
         if 'url' not in session:
             return redirect('/')
         else:
