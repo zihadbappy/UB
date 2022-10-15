@@ -40,7 +40,7 @@ def login_is_required(function):
             return function()
 
     return wrapper
-
+ 
 from app import app
 @app.route('/user/login', methods=['GET'])
 def userlogin():
