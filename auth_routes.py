@@ -41,7 +41,7 @@ def login_is_required(function):
 
     return wrapper
 
-from __main__ import app
+from app import app
 @app.route('/user/login', methods=['GET'])
 def userlogin():
     authorization_url, state = flow.authorization_url()

@@ -23,7 +23,7 @@ from werkzeug.utils import redirect
 from datetime import datetime
 
 app = Flask(__name__)
-app.secret_key = 'development'                                             
+app.secret_key = 'production'                                             
 
 ca = certifi.where()
 logging.basicConfig(level=logging.DEBUG)
