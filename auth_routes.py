@@ -2,7 +2,6 @@ import collections
 from functools import wraps
 from flask.templating import render_template
 from termcolor import colored
-from app import app
 import os
 import pymongo
 import certifi
@@ -13,6 +12,7 @@ from google.oauth2 import id_token
 from google_auth_oauthlib.flow import Flow
 from pip._vendor import cachecontrol
 import google.auth.transport.requests
+
 
 ca = certifi.where()
 client = pymongo.MongoClient("mongodb+srv://zihadbappy:6969@stonn.stmwf.mongodb.net/UrbanBangla?retryWrites=true&w=majority", tlsCAFile=ca)
@@ -30,6 +30,7 @@ flow = Flow.from_client_secrets_file(
     redirect_uri="https://urbanbangla.herokuapp.com/user/callback"
 )
 
+
 def login_is_required(function):
     @wraps(function)
     def wrapper(*args, **kwargs):
@@ -40,17 +41,18 @@ def login_is_required(function):
 
     return wrapper
 
+from __main__ import app
+@app.route('/user/login', methods=['GET'])
+def userlogin():
+    authorization_url, state = flow.authorization_url()
+    session["state"] = state
+    return redirect(authorization_url)
 
 @app.route('/user', methods=['GET'])
 def loginpage():
     return render_template('login.html')
 
 
-@app.route('/user/login', methods=['GET'])
-def userlogin():
-    authorization_url, state = flow.authorization_url()
-    session["state"] = state
-    return redirect(authorization_url)
 
 @app.route('/user/callback', methods=['GET'])
 def callback():

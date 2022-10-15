@@ -1,3 +1,4 @@
+# import auth_routes
 import re
 from flask import Flask, flash, jsonify, request, render_template,redirect, session
 from flask.helpers import url_for
@@ -7,7 +8,7 @@ import asyncio
 import os
 # from pymongo.message import update
 from termcolor import colored
-import dns
+# import dns
 import math
 import json
 from bson import ObjectId   
@@ -22,11 +23,7 @@ from werkzeug.utils import redirect
 from datetime import datetime
 
 app = Flask(__name__)
-app.secret_key = 'production'                                             
-
-import auth_routes
-from auth_routes import login_is_required
-
+app.secret_key = 'development'                                             
 
 ca = certifi.where()
 logging.basicConfig(level=logging.DEBUG)
@@ -35,6 +32,7 @@ client = pymongo.MongoClient("mongodb+srv://zihadbappy:6969@stonn.stmwf.mongodb.
 db=client.UrbanBangla
 # except pymongo.errors.ConnectionFailure as e:
 #     print(colored(e, 'red'))
+
 
 
 @app.route("/")
@@ -123,6 +121,7 @@ def get_words():
 @app.route("/addword", methods=['POST'])
 def post_word():
     session['url']='/addword'
+    print(colored("hi", 'yellow'))
     # Gather necessary data for db
     try:
         word=request.form['word']
@@ -240,6 +239,7 @@ def downvote_word(word_id):
             )
         return redirect(session['url'])
 
+from auth_routes import login_is_required
 @app.route("/addword", methods=['GET'])
 @login_is_required
 def word_form():

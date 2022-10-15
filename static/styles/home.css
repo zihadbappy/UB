@@ -1,6 +1,18 @@
+/* html {
+  min-height: 100%;
+  background: url(https://picsum.photos/id/1043/800/600);
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(255, 0, 150, 0.3);
+} */
+
 body{
-    background-color:  #151f28;
+    /* background-color:  #6f90ba; */
     margin-bottom: 5rem;
+    background-size: contain;
+    background-repeat:no-repeat;
+    background: url(./bg7.jpg) center fixed;
+    /* box-shadow: inset 0 0 0 2000px#6f90ba; */
+
 }
 
 #card{
@@ -8,8 +20,8 @@ body{
     display: table;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 4rem;
-    background-color: #0000002a;
+    margin-top: 3rem;
+    background-color: #222831;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 0.5rem;
@@ -43,20 +55,20 @@ body{
 #exp{
     white-space: pre-line;
     font-size: larger;
-    font-family:'Inconsolata', monospace;
+    font-family:'Inconsolata','Noto Serif Bengali';
     word-spacing: 2px;
     line-height: 1.3;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 
 #definition{
     box-sizing: border-box;
     font-size: larger;
-    font-family:'Inconsolata', monospace;
+    font-family:'Inconsolata','Noto Serif Bengali', monospace;
     word-spacing: 2px;
-    line-height: 1.3;
-    font-weight: 600;
+    line-height: 1.8;
+    font-weight: 400;
     
 }
 
@@ -70,7 +82,7 @@ body{
 
 color:#1FA2F3;
 font-size: 2rem;
-font-family:'Source Code Pro';
+font-family:'Hind Siliguri','Source Code Pro';
 padding:5px 0;
 font-weight: 700;
 }
